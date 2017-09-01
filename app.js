@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
-mongoose.connect('mongodb://localhost/restful_blog_app');
+mongoose.connect('mongodb://localhost/restful_blog_app', {useMongoClient: true});
 // ========================================================
 
 
